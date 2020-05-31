@@ -19,7 +19,7 @@ if(WIN32)
     else()
       list(APPEND BOOST_LIBRARYDIR
         ${BOOST_ROOT}/lib${PLATFORM}-msvc-14.1
-        ${BOOST_ROOT}/lib${PLATFORM}-msvc-14.0)
+        ${BOOST_ROOT}/lib${PLATFORM}-msvc-14.2)
     endif()
   else()
     message(FATAL_ERROR "No BOOST_ROOT environment variable could be found! Please make sure it is set and the points to your Boost installation.")

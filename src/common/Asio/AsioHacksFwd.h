@@ -48,17 +48,14 @@ namespace boost
         }
 
 #if BOOST_VERSION >= 106600
-        template <typename Time, typename TimeTraits>
-        class basic_deadline_timer;
-
-        typedef basic_deadline_timer<posix_time::ptime, time_traits<posix_time::ptime>> deadline_timer;
+        class executor;
 
         namespace ip
         {
-            template <typename InternetProtocol>
+            template <typename InternetProtocol, typename Executor>
             class basic_resolver;
 
-            typedef basic_resolver<tcp> tcp_resolver;
+            typedef basic_resolver<tcp, executor> tcp_resolver;
     }
 #else
         template <typename TimeType, typename TimeTraits>
